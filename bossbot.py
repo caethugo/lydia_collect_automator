@@ -10,7 +10,7 @@ import functions as fun #our own file, containing all needed dependencies
 path_to_driver = "/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver" #You need a chromedriver to navigate through webpages
 link = "https://fb.me/e/2e7mRxvMx" #replace this link by the link of the facebook event you want to navigate through
 user = os.getenv("fb_user") #you just need to store your user email address 
-pwd =os.getenv("fb_pwd") #and password
+pwd = os.getenv("fb_pwd") #and password
 dic = { #Here you have to give your personal pieces of information that could be required in the form
     'Nom' : 'Caetano',
     'Prénom' : 'Hugo',
@@ -40,7 +40,7 @@ print("The lydia collect link was stored")
 
 ###We design a fast reacting driver
 caps = DesiredCapabilities().CHROME
-caps["pageLoadStrategy"] = "none"
+caps["pageLoadStrategy"] = "eager" #waits for the page to be interactive
 driver2 = webdriver.Chrome(desired_capabilities=caps, executable_path='/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver')
 driver2.get(lydia_link)
 fun.true_completer(driver = driver2, dic = dic)

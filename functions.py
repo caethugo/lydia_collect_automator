@@ -18,10 +18,11 @@ def nonotif_driver_init(path_to_chrome_driver, link) :
     })
 
     #About not wanting a page to fully load
-    caps = DesiredCapabilities().CHROME
-    caps["pageLoadStrategy"] = "none"   # Just wait until page is interactive
+    #caps = DesiredCapabilities().CHROME
+    #caps["pageLoadStrategy"] = "none"   # Just wait until page is interactive
 
-    driver = webdriver.Chrome(desired_capabilities=caps, chrome_options=option, executable_path='/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver')
+    #driver = webdriver.Chrome(desired_capabilities=caps, chrome_options=option, executable_path='/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver')
+    driver = webdriver.Chrome(chrome_options=option, executable_path='/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver') #we can't afford to be quick because of cookies and it is of no use here. I could do only one dirver with a wait time here...
     driver.get(link) 
     return driver
 
