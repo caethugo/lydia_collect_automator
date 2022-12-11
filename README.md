@@ -16,7 +16,9 @@ The main function is `watcher_completer`, it takes as input [...].
     - Note that `page_watcher()` takes as input a link to the page to look into, and a pattern to recognize in the link. + a waiting time and a step time too refresh the page and watch for new posts. 
 
 - Then, `watcher_completer()` calls `lydia_form_filer()`, which will complete the lydia form
-   - To complete this form, `lydia_form_filer()` : 
-     - takes as input a dictionary with key values and its attributes to complete
-     - will complete all missing text fields with "Je ne sais pas" and all scrolling menus with their first option.
+- To complete this form, `lydia_form_filer()` : 
+  - takes as input a dictionary with key values and its attributes to complete
+  - will complete all missing text fields with "Je ne sais pas" and all scrolling menus with their first option.
+
+- At first, there will be a logger function which would log one to facebook ! 
 
