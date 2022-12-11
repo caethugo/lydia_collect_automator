@@ -2,6 +2,8 @@
 
 ##Importing all useful modules and functions. I chose not to import dependencies because it makes the code less readable
 import os #Can be useful to get one's credentials without putting them in clear text
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities #because of our last step
 import functions as fun #our own file, containing all needed dependencies
 
 ##Storing my credentials and defining all useful variables for my shotgun
@@ -31,10 +33,17 @@ fun.facebook_logger(driver = driver, user = user, pwd = pwd)
 
 
 ##Starting to watch link in page
-lydia_driver = fun.pagewatcher(waitingtime = 90, step = 2, link = "collecte.io", driver = driver)
-print("The lydia driver was defined")
+lydia_link = fun.pagewatcher(waitingtime = 90, step = 2, link = "collecte.io", driver = driver)
+print("The lydia collect link was stored")
+
 ##Complete it
-fun.true_completer(driver = lydia_driver, dic = dic)
+
+###We design a fast reacting driver
+caps = DesiredCapabilities().CHROME
+caps["pageLoadStrategy"] = "none"
+driver2 = webdriver.Chrome(desired_capabilities=caps, executable_path='/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver')
+driver2.get(lydia_link)
+fun.true_completer(driver = driver2, dic = dic)
 print("The lydia form was completed")
 #Then submit it ! Note that not submitting it can be safer because some inputs could be unexpected in the lydia form !
 #submit = lydia_driver.find_element(By.ID, 'submit-state-lydia') #finding the submit button

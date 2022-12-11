@@ -52,7 +52,7 @@ def pagewatcher(waitingtime = 90, step = 5, link = "collecte.io", driver = None)
     while time.time() - time0 < waitingtime :
         try : 
             lydia = driver.find_element(By.CSS_SELECTOR, "a[href*='" + link + "']")
-            driver.get(lydia.get_attribute("href")) #let's move to the lydia page ! We could open another driver but it would make us lose time
+            lydia = lydia.get_attribute('href') #strange looking operation to get the link returned and not a driver, for speed purposes
             print("the link is clicked on")#Here we would call the lydia form filler function but we need to make it work together first
             m = 1
             break #if we find the link, stop looking for it 
@@ -63,7 +63,7 @@ def pagewatcher(waitingtime = 90, step = 5, link = "collecte.io", driver = None)
         time.sleep(step)
     if m == 1 :
         print("it seems like we can complete the form")
-        return(driver)
+        return(lydia)
     elif m == 2 :
         return("The link was never found")
 
