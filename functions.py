@@ -103,3 +103,6 @@ def true_completer(driver, dic):
             first_option_k = uncomp_k.find_element(By.XPATH, first_option_path_k)
             first_option_k.click()
     return("The form was completed without problem")
+
+def randomfunc() :
+    return 4
