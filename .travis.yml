@@ -1,0 +1,7 @@
+#Run all tests using python 3.9
+python:
+  - "3.9"
+
+#I need to run pytest when I commit
+script:
+  - pytest
