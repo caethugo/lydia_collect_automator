@@ -105,4 +105,5 @@ def true_completer(driver, dic):
     return("The form was completed without problem")
 
 def randomfunc() :
-    return 4
+    return 8
+
