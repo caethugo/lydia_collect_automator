@@ -1,5 +1,14 @@
 # Lydia collect automator
 
+## About the license : 
+
+This project is licensed under the terms of the GNU General Public License version 2 (GPLv2). You can find a copy of the GPLv2 license in the "LICENSE" file in the root directory of this repository.
+
+The GPLv2 grants users the freedom to use, modify, and distribute this software. However, users must also make the source code available to recipients of the software and include a copy of the GPLv2 license with any modified versions of the software.
+
+For more information on the terms of the GPLv2 license, please see the "LICENSE" file.
+
+# Core
 The goal of this repo is to define a function : 
 
 -  taking a URL and a list of attributes as input
