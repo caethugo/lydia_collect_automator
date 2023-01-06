@@ -1,7 +1,5 @@
 # Lydia Collect Automator
 
-Lydia Collect Automator is a tool that helps you automate the collection of cards in the game Lydia. With this tool, you can easily set up a schedule to collect your cards at regular intervals, freeing you up to do other things while still ensuring that you don't miss out on any rewards.
-
 ## Installation
 
 To install Lydia Collect Automator, follow these steps:
