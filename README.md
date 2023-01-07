@@ -31,3 +31,19 @@ The main function is `watcher_completer`, it takes as input [...].
 
 - At first, there will be a logger function which would log one to facebook ! 
 
+# Online version (07/01/2023)
+The goal is now to put a version online, with a cool interface. 
+
+## About fields and options
+In this interface, one should be able to input his credentials (there won't be kept in memory or whatever, the user would have to input them for each utilization), the facebook page he wants to look into, and a dictionnary with all fields he wants to complete. 
+
+Then, there should be toggles than a user could activate or not : 
+
+- One to say if he wants the form to be directly completed or if he wants to submit it manually after all fields are completed. 
+
+- One to ask if the user wants to accept the cookies manually and/or to enter his credentials manually (in this case, my bot will just be useful to complete the form and send it)
+
+## About the functioning itself
+
+How a user will be able to use the bot ? Well, I'm thinking of a credentials for it, with a limited number of uses per person. I could imagine a system of paid recharges with let's say 5 or ten shotguns for 1 euro or I don't know. I have to see if it's legal too... The recharge system enable the users to freely exchange their credentials, since they have only limited shotguns. 
+

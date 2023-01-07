@@ -9,8 +9,8 @@ import functions as fun #our own file, containing all needed dependencies
 ##Storing my credentials and defining all useful variables for my shotgun
 path_to_driver = "/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver" #You need a chromedriver to navigate through webpages
 link = "https://fb.me/e/2e7mRxvMx" #replace this link by the link of the facebook event you want to navigate through
-user = os.getenv("fb_user") #you just need to store your user email address 
-pwd = os.getenv("fb_pwd") #and password
+user = input("fb_user") #you just need to store your user email address 
+pwd = input("fb_pwd") #and password
 dic = { #Here you have to give your personal pieces of information that could be required in the form
     'Nom' : 'Caetano',
     'Prénom' : 'Hugo',
@@ -34,7 +34,7 @@ fun.facebook_logger(driver = driver, user = user, pwd = pwd)
 
 ##Starting to watch link in page
 lydia_link = fun.pagewatcher(waitingtime = 90, step = 2, link = "collecte.io", driver = driver)
-print("The lydia collect link was stored")
+print("The pagewatcher() function has finished its job")
 
 ##Complete it
 
