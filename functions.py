@@ -54,7 +54,7 @@ def pagewatcher(waitingtime = 90, step = 5, link = "collecte.io", driver = None)
         try : 
             lydia = driver.find_element(By.CSS_SELECTOR, "a[href*='" + link + "']")
             lydia = lydia.get_attribute('href') #strange looking operation to get the link returned and not a driver, for speed purposes
-            print("the link is clicked on")#Here we would call the lydia form filler function but we need to make it work together first
+            print("the link was found")#Here we would call the lydia form filler function but we need to make it work together first
             m = 1
             break #if we find the link, stop looking for it 
         except NoSuchElementException :

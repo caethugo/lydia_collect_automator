@@ -10,7 +10,8 @@ import functions as fun #our own file, containing all needed dependencies
 path_to_driver = "/Users/hugocaetano/Desktop/lydia_collect_automator/chromedriver" #You need a chromedriver to navigate through webpages
 link = "https://fb.me/e/2e7mRxvMx" #replace this link by the link of the facebook event you want to navigate through
 user = input("fb_user") #you just need to store your user email address 
-pwd = input("fb_pwd") #and password
+pwd = input("fb_pwd") #an1Chatetmoi
+
 dic = { #Here you have to give your personal pieces of information that could be required in the form
     'Nom' : 'Caetano',
     'Prénom' : 'Hugo',
@@ -36,6 +37,8 @@ fun.facebook_logger(driver = driver, user = user, pwd = pwd)
 lydia_link = fun.pagewatcher(waitingtime = 90, step = 2, link = "collecte.io", driver = driver)
 print("The pagewatcher() function has finished its job")
 
+##We don't need the first driver anymore. Let's do this clean.
+driver.close() 
 ##Complete it
 
 ###We design a fast reacting driver
@@ -48,3 +51,4 @@ print("The lydia form was completed")
 #Then submit it ! Note that not submitting it can be safer because some inputs could be unexpected in the lydia form !
 #submit = lydia_driver.find_element(By.ID, 'submit-state-lydia') #finding the submit button
 #submit.click()
+driver2.close()

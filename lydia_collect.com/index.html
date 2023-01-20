@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lydia collect automator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>Lydia collect automator</h1>
+
+    <p>You can navigate through this tab to begin using the bot right now. <br>
+        If you want to, you can check its documentation in the About this bot tab.      
+    </p>
+
+    <div id="tab-container">
+        <div class="tab-links">
+            <button class="tab-link" id="bot-link">Use the bot</button>
+            <button class="tab-link" id="documentation-link">About this bot</button>
+    </div> <!--End of tab buttons-->
+
+    <div class="tab" id="bot">
+    <form>
+      <label for="facebook-link">Facebook Link:</label>
+      <input type="text" id="facebook-link" name="facebook-link"><br>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+      
+      <label for="fields-number">Number of fields :</label>
+      <input type="number" id="fields-number" name="fields-number"><br>
+      
+      <div id="fields-container"></div>
+      
+      <label for="auto-submit">Auto submit form:</label>
+      <input type="checkbox" id="auto-submit" name="auto-submit"><br>
+      
+      <label for="accept-cookies">Accept Cookies manually:</label>
+      <input type="checkbox" id="accept-cookies" name="accept-cookies"><br>
+      
+      <label for="manual-credentials">Enter credentials manually :</label>
+      <input type="checkbox" id="manual-credentials" name="manual-credentials"><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+ </div> <!--End of first tab-->
+
+ <div class="tab" id="documentation">
+    <h1>What is this bot ?</h1>
+
+    <h2>Goal behind this bot</h2>
+    <p>
+        The objective of this project is to automate the shotgun of events'places. <br>
+    It works especially for events that have a facebook page dedicated and for shotguns organized with a Lydia collect.
+    It can ensure one's presence to any event organized with Lydia on Facebook. 
+    </p>
+    <h2>How to use the bot</h2>
+    <p>
+    The bot will be taking as input : 
+    <div>
+        <ul>
+          <li>The facebook page link for the event</li>
+          <li>The user's facebook credentials in order to access the page <strong>*</strong></li>
+          <li>The number of fields he wants to complete</li>
+        </ul>
+      </div>
+    <br>
+    Then, the user will be asked to enter its key / value fields according to the number of fields he provided. 
+    <br>
+    For instance, if you know there will be a "Name" field in the Lydia collect, you have to provide the field Name with the value being your name.
+      taking a URL and a list of attributes as input
+One you gave all your key / value pairs, the bot will be able to detect on the facebook page you provided 
+the presence of a lydia collect link. Eventually, it will open it, and complete the form with the given attributes. <br>
+<br>
+The user can activate 3 toggles : 
+<div>
+    <ul>
+      <li><strong>Auto submit form</strong></li>
+      The bot can either let the user check the form content before submitting it himself, or activate this toggle to let the bot
+      submit the form right after completing all the fields. 
+      <li><strong>Accept Cookies</strong></li>
+      The user can either accept facebook cookies manually or let the bot accept those. 
+      <li><strong>Enter credentials manually</strong></li>
+      If the user wants to enter his credentials himself and not give them to the website, he can. Once the bot is launched, the user
+      will just have to input it in the facebook page opened by the bot.
+    </ul>
+  </div>
+</p>
+
+    <h1>About this bot</h1>
+    <p>
+    If you have any question about the bot, you can contact me at boulcheat99@gmail.com. <br>
+    <br>
+    Also, you can check my : <a href="https://github.com/hugowola/">Github</a>.
+    </p>    
+    
+  </div> <!--End of second tab-->
+    
+
+</div> <!--End of the tab container-->
+<script src="script.js"></script>
+  </body>
+</html>
