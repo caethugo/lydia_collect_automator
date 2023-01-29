@@ -47,3 +47,4 @@ Then, there should be toggles than a user could activate or not :
 
 How a user will be able to use the bot ? Well, I'm thinking of a credentials for it, with a limited number of uses per person. I could imagine a system of paid recharges with let's say 5 or ten shotguns for 1 euro or I don't know. I have to see if it's legal too... The recharge system enable the users to freely exchange their credentials, since they have only limited shotguns. 
 
+The problem I encountered with this project is that even if the bot works correctly locaaly, I can't find a way to use the python library Selenium within a website. For instance, the PyScript lbrary doesn't support Selenium. Until I find a solution, this project will be paused. 
