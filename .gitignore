@@ -1,3 +1,7 @@
 .*
 *.log
 *.png
+__pycache__/
+myenv/
+node_modules/
+*.json
