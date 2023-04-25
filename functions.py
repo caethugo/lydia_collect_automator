@@ -5,6 +5,10 @@ import time
 from selenium.webdriver.chrome.options import Options #We need this to prevent notifications and pop-ups
 from selenium.common.exceptions import NoSuchElementException #to try and catch the error we need to import it !
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities #This will enable us not to wait until the page is fully loaded with .get()
+from selenium.webdriver.chrome.service import Service #to use a webdriver from streamlit 
+from webdriver_manager.chrome import ChromeDriverManager
+import streamlit as st
+
 
 def nonotif_driver_init(path_to_chrome_driver, link) :
     #About blocking those pop-up notifications
@@ -103,3 +107,12 @@ def true_completer(driver, dic):
             first_option_k = uncomp_k.find_element(By.XPATH, first_option_path_k)
             first_option_k.click()
     return("The form was completed without problem")
+
+
+def get_driver():
+    """This function enables me to use a chrome driver from a streamlit app"""
+    options = Options()
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+

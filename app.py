@@ -10,7 +10,6 @@ import streamlit as st
 import json 
 from streamlit_ace import st_ace
 
-
 def app():
     try:
         #Storing the credentials and defining all useful variables for the shotgun
@@ -76,3 +75,7 @@ def app():
         st.error("An error occurred: {}".format(e))
 
 app()
+
+#To test on other computers without deploying, run the following in your terminal : 
+#streamlit run app.py &>/dev/null&
+#npx localtunnel --port 8501
